@@ -40,6 +40,11 @@
 			</div>
 		</form>
 	</div>
+
+    <footer>
+        <p>Author : RichKey <br>
+        <a href="https://www.instagram.com/ezbeng_/">@ezbeng_</a></p>
+    </footer>
 </body>
 <script>
 function validasi() {
@@ -49,7 +54,7 @@ function validasi() {
     var hobi = document.getElementById("hobi").value;
     var gender = document.getElementById("g1","g2").value;
 
-    if (nama != "" && email!="" && alamat !="") {
+    if (nama != "" && email!="" && alamat !=""  && hobi !=""  && gender !="") {
         return true;
     }else{
         alert('Anda harus mengisi data dengan lengkap !');
