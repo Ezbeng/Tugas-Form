@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  href="style.css">
+</head>
+<body>
+    <center><h2>FORMULIR</h2></center>
+    <div class="login">
+		<form onSubmit="validasi()">
+			<div>
+				<label>Nama Lengkap:</label>
+				<input type="text" name="nama" placeholder="Masukkan Nama Lengkap" id="nama" required />
+			</div>
+			<div>
+				<label>Email:</label>
+				<input type="email" name="email" placeholder="Masukkan Email Aktif" id="email" required />
+			</div>
+            <div>
+                <label>Hobi:</label>
+                <input type="text" name="hobi" placeholder="Masukkan Hobi" id="hobi" required>
+            </div>
+            <div>
+                <p>Gander:</p>
+                <input type="radio" name="gender" id="g1">
+                <label for="g1">Laki-Laki</label><br>
+                <input type="radio" name="gender" id="g2">
+                <label for="g2">Perempuan</label>
+
+            </div>
+			<div>
+				<label>Alamat:</label>
+				<textarea cols="50" rows="4" name="alamat" id="alamat" required></textarea>
+			</div>
+			<div>
+				<input type="submit" value="Daftar" class="tombol">
+			</div>
+		</form>
+	</div>
+</body>
+<script>
+function validasi() {
+    var nama = document.getElementById("nama").value;
+    var email = document.getElementById("email").value;
+    var alamat = document.getElementById("alamat").value;
+    var hobi = document.getElementById("hobi").value;
+    var gender = document.getElementById("g1","g2").value;
+
+    if (nama != "" && email!="" && alamat !="") {
+        return true;
+    }else{
+        alert('Anda harus mengisi data dengan lengkap !');
+    }
+}</script>
+</html>
