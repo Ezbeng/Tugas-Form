@@ -12,17 +12,17 @@
     <div class="login">
 		<form onSubmit="validasi()">
 			<div>
-				<label>Nama Lengkap:</label>
-				<input type="text" name="nama" placeholder="Masukkan Nama Lengkap" id="nama" maxlength="25" required />
+				<label>Username:</label>
+				<input type="text" name="nama" placeholder="Masukkan Username" id="nama" onkeypress="return event.charCode != 32" maxlength="32" required />
 			</div>
-			<div>
+            <div>
+                <label>Password:</label>
+                <input type="text" name="pass" placeholder="Masukkan Password" id="pass" required>
+            </div>
+            <div>
 				<label>Email:</label>
 				<input type="email" name="email" placeholder="Masukkan Email Aktif" id="email" required />
 			</div>
-            <div>
-                <label>Hobi:</label>
-                <input type="text" name="hobi" placeholder="Masukkan Hobi" id="hobi" required>
-            </div>
             <div>
                 <p>Gander:</p>
                 <input type="radio" name="gender" id="g1">
@@ -51,10 +51,10 @@ function validasi() {
     var nama = document.getElementById("nama").value;
     var email = document.getElementById("email").value;
     var alamat = document.getElementById("alamat").value;
-    var hobi = document.getElementById("hobi").value;
+    var pass = document.getElementById("pass").value;
     var gender = document.getElementById("g1","g2").value;
 
-    if (nama != "" && email!="" && alamat !=""  && hobi !=""  && gender !="") {
+    if (nama != "" && pass!="" && alamat !=""  && hobi !=""  && gender !="") {
         return true;
     }else{
         alert('Anda harus mengisi data dengan lengkap !');
